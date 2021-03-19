@@ -3,7 +3,7 @@ dist: xenial
 sudo: true
 
 python:
-  - 3.7
+  - 3.8
 
 env:
   global:
@@ -15,4 +15,4 @@ install:
   - pipenv sync -d
 
 script:
-  - pipenv run flake 8 .
+  - pipenv run flake8 .
