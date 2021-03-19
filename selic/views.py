@@ -1,10 +1,16 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+# from django.http import HttpResponse
 # Create your views here.
 
 
 def ola(request):
-    return HttpResponse("<h1>Olá Rafael</h1>")
+    contexto = {"nome": "jose", "idade": 100}
+    return render(request, 'selic/ola.html', contexto)
 
 
 def rafael(request):
-    return HttpResponse("<p>Rafael Gomes</p>")
+    contexto = {"nome": "Rafael Gomes", "idade": 17}
+    return render(request, 'selic/rafael.html', contexto)
+
+# def rafael(request):
+#    return HttpResponse("<p>Rafael Gomes</p>")

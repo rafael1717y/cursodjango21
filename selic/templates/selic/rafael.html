@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Olá</title>
+</head>
+<body>
+<p>{{ nome }}</p>
+<p> {{ idade }}</p>
+{% if idade == 18 %}
+    <p>Você pode dirigir.</p>
+{% elif idade >= 16 and idade <= 17 %}
+    <p>Você pode votar</p>
+{% else%}
+    <p>Você é uma criança!</p>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Olá</title>
+</head>
+<body>
+<h1>Olá {{ nome }}</h1>
+<h2> Você tem {{ idade }} anos</h2>
+{% if nome == 'rafael' %}
+    <p>Você é o Rafael</p>
+{% elif nome == 'jose' %}
+    <p>Você é o José</p>
+{% else%}
+    <p>Você não é o Rafael!</p>
+{% endif %}
+</body>
+</html>
