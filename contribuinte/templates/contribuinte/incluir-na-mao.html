@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Parcelamento de Arrematação</title>
+</head>
+<body>
+<h1>Parcelamento de Arrematação - PGFN</h1>
+<hr>
+<h2>Incluir Contribuinte</h2>
+<hr>
+<form action="{% url 'contribuinte_incluir_na_mao' %}" method="post">
+    {% csrf_token %}
+    <p>
+    <label for="ni">NI:</label>
+    <input type="text" name="ni" id="ni" placeholder="CPF ou CNPJ">
+    </p>
+    <p>
+    <label for="nome">Ano:</label>
+    <input type="text" name="nome" id="nome" placeholder="Nome ou Razão Social">
+    </p>
+    <p>
+    <label for="contato">Contato:</label>
+    </p>
+    <p>
+    <textarea name="contato" id="contato" cols="38" rows="18"></textarea>
+    </p>
+    <button type="submit">Cadastrar</button>
+</form>
+</body>
+</html>

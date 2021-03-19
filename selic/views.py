@@ -1,6 +1,17 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
-# Create your views here.
+from selic import utils
+
+
+def incluir_na_mao(request):
+    if request.method == 'POST':
+        if utils.validar_mes(request.POST["mes"]):
+            mes = int(request.POST["mes"])
+        if utils.validar_ano(request.POST["ano"]):
+            ano = int(request.POST["ano"])
+        if utils.validar_valor(request.POST["valor"]):
+            valor = float(request.POST["valor"])
+    print(mes + ano + valor)
+    return render(request, 'selic/incluir-na-mao.html')
 
 
 def ola(request):
