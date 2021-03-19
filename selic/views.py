@@ -7,9 +7,10 @@ def incluir_na_mao(request):
         if utils.validar_mes(request.POST["mes"]):
             mes = int(request.POST["mes"])
         if utils.validar_ano(request.POST["ano"]):
-            mes = int(request.POST["ano"])
+            ano = int(request.POST["ano"])
         if utils.validar_valor(request.POST["valor"]):
             valor = float(request.POST["valor"])
+    print(mes + ano + valor)
     return render(request, 'selic/incluir-na-mao.html')
 
 
