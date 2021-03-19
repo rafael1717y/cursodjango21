@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Parcelamento de Arrematação</title>
+</head>
+<body>
+<h1>Parcelamento de Arrematação - PGFN</h1>
+<hr>
+<h2>Incluir SELIC</h2>
+<hr>
+<form action="{% url 'selic_incluir_na_mao' %}" method="post">
+    {% csrf_token %}
+    <p>
+    <label for="mes">Mês:</label>
+    <input type="number" name="mes" id="mes" min="1" max="12" placeholder="1">
+    </p>
+    <p>
+    <label for="ano">Ano:</label>
+    <input type="number" name="ano" id="ano" min="2020" placeholder="2020">
+    </p>
+    <p>
+    <label for="valor">Valor:</label>
+    <input type="number" name="valor" id="valor" min="0.01" placeholder="0.01" step="0.01">
+    </p>
+    <button type="submit">Cadastrar</button>
+</form>
+</body>
+</html>

@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from selic import views
+from selic import views as selic_views
+from contribuinte import views as contrib_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ola/', views.ola),
-    path('rafael/', views.rafael)
+    path('ola/', selic_views.ola),
+    path('rafael/', selic_views.rafael),
+    path('selic/incluir-na-mao/', selic_views.incluir_na_mao, name="selic_incluir_na_mao"),
+    path('contribuinte/incluir-na-mao/', contrib_views.incluir_na_mao, name="contribuinte_incluir_na_mao"),
 ]
