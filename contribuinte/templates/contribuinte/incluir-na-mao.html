@@ -2,6 +2,16 @@
 <html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <style>
+        .erro {
+             color: red;
+             font-size: smaller
+        }
+        .sucesso {
+             color: green;
+             font-weight: bold;
+             }
+    </style>
     <title>Parcelamento de Arrematação</title>
 </head>
 <body>
@@ -14,10 +24,16 @@
     <p>
     <label for="ni">NI:</label>
     <input type="text" name="ni" id="ni" placeholder="CPF ou CNPJ">
+    {% if erro_ni %}
+        <p class="erro">{{ erro_ni }} </p>
+        {% endif %}
     </p>
     <p>
-    <label for="nome">Ano:</label>
+    <label for="nome">Nome:</label>
     <input type="text" name="nome" id="nome" placeholder="Nome ou Razão Social">
+    {% if erro_nome %}
+        <p class="erro">{{ erro_nome }} </p>
+        {% endif %}
     </p>
     <p>
     <label for="contato">Contato:</label>
@@ -26,6 +42,9 @@
     <textarea name="contato" id="contato" cols="38" rows="18"></textarea>
     </p>
     <button type="submit">Cadastrar</button>
+    {% if sucesso %}
+    <p class="sucesso" > {{ sucesso }}</p>
+    {% endif %}
 </form>
 </body>
 </html>
