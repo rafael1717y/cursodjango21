@@ -1,5 +1,6 @@
 import re
 
+
 def validar_ni(ni):
     ni = str(ni)
     ni = re.sub('\\D', '', ni)
@@ -9,6 +10,7 @@ def validar_ni(ni):
         return validar_cpf(ni)
     elif len(ni) == 14:
         return validar_cnpj(ni)
+
 
 def validar_cpf(ni):
     ni = str(ni)
@@ -30,6 +32,7 @@ def validar_cpf(ni):
     else:
         return False
 
+
 def _calcular_digito_verificaro_cpf(cpf):
     soma_pesos = 0
     indice = 0
@@ -45,6 +48,7 @@ def _calcular_digito_verificaro_cpf(cpf):
         dv = 0
     return dv
 
+
 def _calculo_digito_verificador_cnpj(cnpj):
     soma_pesos = 0
     peso = 2
@@ -59,6 +63,7 @@ def _calculo_digito_verificador_cnpj(cnpj):
     else:
         dv = 11 - dv
     return dv
+
 
 def validar_cnpj(cnpj):
     ni = str(cnpj)
@@ -80,4 +85,3 @@ def validar_cnpj(cnpj):
         return cnpj
     else:
         return False
-

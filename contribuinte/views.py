@@ -24,6 +24,4 @@ def incluir_na_mao(request):
             contribuinte.contato = contato
             contribuinte.save()
             contexto['sucesso'] = 'Contribuinte incluído com sucesso.'
-
-
     return render(request, "contribuinte/incluir-na-mao.html", contexto)

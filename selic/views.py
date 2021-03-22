@@ -2,9 +2,11 @@ from django.shortcuts import render
 from selic import utils
 from .models import Selic
 
+
 def listar_na_mao(request):
     contexto = {'lista': Selic.objects.all()}
     return render(request, 'selic/listar-na-mao.html', contexto)
+
 
 def incluir_na_mao(request):
     contexto = {}
