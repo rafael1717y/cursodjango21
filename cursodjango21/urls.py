@@ -23,5 +23,6 @@ urlpatterns = [
     path('ola/', selic_views.ola),
     path('rafael/', selic_views.rafael),
     path('selic/incluir-na-mao/', selic_views.incluir_na_mao, name="selic_incluir_na_mao"),
+    path('selic/listar-na-mao/', selic_views.listar_na_mao, name="selic_listar_na_mao"),
     path('contribuinte/incluir-na-mao/', contrib_views.incluir_na_mao, name="contribuinte_incluir_na_mao"),
 ]
