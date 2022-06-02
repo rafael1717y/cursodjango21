@@ -25,10 +25,10 @@
         },
         "django": {
             "hashes": [
-                "sha256:95c13c750f1f214abadec92b82c2768a5e795e6c2ebd0b4126f895ce9efffcdd",
-                "sha256:e2f73790c60188d3f94f08f644de249d956b3789161e7604509d128a13fb2fcc"
+                "sha256:502ae42b6ab1b612c933fb50d5ff850facf858a4c212f76946ecd8ea5b3bf2d9",
+                "sha256:f7431a5de7277966f3785557c3928433347d998c1e6459324501378a291e5aab"
             ],
-            "version": "==3.2.1"
+            "version": "==4.0.5"
         },
         "pytz": {
             "hashes": [
